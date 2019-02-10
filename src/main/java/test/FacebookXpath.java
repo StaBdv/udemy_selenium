@@ -14,13 +14,13 @@ public class FacebookXpath {
         System.setProperty("webdriver.chrome.driver", "/Users/StaBdv/Webdriver/chromedriver");
 
         // object creation
-        WebDriver driver = new ChromeDriver();
+        ChromeDriver driver = new ChromeDriver();
 
         // open URL
         driver.get("http://facebook.com");
         // print site details
-        //System.out.println(driver.getTitle());
-        //System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
 
         // actions
         /*((ChromeDriver) driver).findElementByCssSelector("[title*='Sign in']").click();
@@ -28,7 +28,7 @@ public class FacebookXpath {
         ((ChromeDriver) driver).findElementByXPath("//input[contains(@id,'password')]").sendKeys("my_password");
         ((ChromeDriver) driver).findElementByCssSelector("[title*='Sign in']").click();
         */
-        ((ChromeDriver) driver).findElementByXPath("//input[contains(@value,'Log In')]").click();
+        driver.findElementByXPath("//input[contains(@value,'Log In')]").click();
 
 
     }
